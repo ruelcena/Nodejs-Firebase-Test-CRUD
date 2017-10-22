@@ -1,0 +1,67 @@
+<% include ../layout/header %>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <h2><%=title%></h2>
+        </div>
+        <div class="col-md-auto">
+            <a href="todos/add/" class="btn btn-primary my-2">Add Todo</a>
+        </div>
+        <div class="col col-lg-3">
+                <form class="form-inline my-2 my-lg-0 search-form" method="get">
+                        
+                        <div class="d-flex justify-content-end">
+                            <div class="ml-auto p-2"><div class="input-group">
+                                <input type="text" name="s" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                  <button class="btn btn-primary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </span>
+                              </div>
+                            </div>
+                        </div>            
+            
+                  </form>              
+        </div>
+    </div>
+
+    <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@TwBootstrap</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+
+</div>
+
+<% include ../layout/footer %>

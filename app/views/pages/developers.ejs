@@ -1,0 +1,71 @@
+<% include ../layout/header %>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <h2><%=title%></h2>
+        </div>
+        <div class="col-md-auto">
+            <a href="developers/add/" class="btn btn-primary my-2">Add Developer</a>
+        </div>
+        <div class="col col-lg-3">
+                <form class="form-inline my-2 my-lg-0 search-form" method="get">
+                        
+                        <div class="d-flex justify-content-end">
+                            <div class="ml-auto p-2"><div class="input-group">
+                                <input type="text" name="s" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                  <button class="btn btn-primary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </span>
+                              </div>
+                            </div>
+                        </div>            
+            
+                  </form>              
+        </div>
+    </div>
+
+    <table class="table table-bordered">
+            <thead>
+              <tr>                
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <% if (data.length > 0) { %>
+              <% data.forEach(function(rec) { %>                 
+
+                  <tr>                      
+                      <td><%=rec.name%></td>
+                      <td><%=rec.email%></td>
+                      <td><%=rec.address%></td>
+                      <td>
+                        <a href="<%=baseUrl%>developers/edit/<%=rec.id%>" title="Edit Profile" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                        <a href="<%=baseUrl%>developers/del/<%=rec.id%>" title="Delete Profile" class="ac-delete btn btn-danger btn-sm"><i class="fa fa-remove"></i></a>
+                        <a href="<%=baseUrl%>todos/add/<%=rec.id%>" title="Add Todo" class="btn btn-success btn-sm"><i class="fa fa-tasks"></i></a>
+                      </td>
+                    </tr>
+
+              <% }); %>
+
+              <% } else { %>
+
+                <tr>
+                    <th colspan="4">No record listing...</th>
+                </tr>                
+
+              <% } %>  
+
+            </tbody>
+          </table>
+          
+          <div class="text-center"><a href="?prev=1" class="btn btn-primary">Previous</a> <% if (!isLastPage) {%><a href="?next=1" class="btn btn-primary">Next</a><% } %></div>
+
+</div>
+
+<% include ../layout/footer %>

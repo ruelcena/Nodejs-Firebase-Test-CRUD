@@ -1,0 +1,43 @@
+body {
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+}
+
+/*Reset*/
+.navbar-default {
+    border-bottom: 1px solid;
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #444444;
+    font-size: 28px;
+    padding: 0px;
+}
+
+#navbarCollapse {
+    margin-left: 50px;
+}
+
+.navbar-nav .nav-link {
+    color: #444444;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #333333;
+}
+
+/*Todos*/
+#todos .todo-list {
+    padding: 0px;
+    margin: 0px;
+}
+#todos .todo-list li  {
+    padding: 10px 0 10px 0;
+    list-style: none;
+}

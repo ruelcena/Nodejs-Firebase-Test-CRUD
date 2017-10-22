@@ -1,0 +1,47 @@
+<% include ../layout/header %>
+
+<div class="container">
+    
+    <h2><%=title%></h2>
+
+    <form action="<%=baseUrl%><%=action%>" method="post">
+     
+     <input type="hidden" name="id" value="<%=data.id%>">
+     
+            <div class="form-row">              
+              <div class="form-group col-md-6">
+                <label for="fullname" class="col-form-label">Name</label>
+                <input type="text" name="fullname" class="form-control" value="<%=data.name%>" id="fullname" placeholder="Name">
+              </div>
+              <div class="form-group col-md-6">
+                    <label for="email" class="col-form-label">Email</label>
+                    <input type="email" name="email" class="form-control"  value="<%=data.email%>" placeholder="Email">
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address" class="col-form-label">Address</label>
+              <input type="text" name="address" class="form-control" id="address"  value="<%=data.address%>" placeholder="1234 Main St">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="city" class="col-form-label">City</label>
+                <input type="text" name="city" class="form-control" id="city" value="<%=data.city%>">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="state" class="col-form-label">State</label>                
+                <input type="text" name="state" class="form-control" id="state" value="<%=data.state%>">
+              </div>
+              <div class="form-group col-md-2">
+                <label for="zip" class="col-form-label">Zip</label>
+                <input type="text" name="zip" class="form-control" id="zip" value="<%=data.zip%>">
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+</div>
+
+<% include ../layout/footer %>
